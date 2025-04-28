@@ -128,24 +128,11 @@ namespace WindowsFormsApp_02_Varable
             bool isAvailable = false;
             //할인된 가격
             double discountedPrice = productPrice * (1 - discountRate);
-            if(stockCount > 0)
-            {
-                isAvailable = true;
-                textBox_print1.Text=$"구매 가능: 할인 가격은 {discountedPrice:F2}입니다.\r\n";//실수 2자리 까지만 출력
-            }
-            else
-            {
-                isAvailable = false;
-                textBox_print1.Text = $"품절되었습니다.\r\n";
-            }
-            if (stockCount >= 5)
-            {
-                textBox2.Text = "여유 있음";
-            }
-            else
-            {
-                textBox2.Text = "소량 남음";
-            }
+
+            isAvailable= stockCount>0? true : false;
+            textBox_print1.Text=isAvailable? $"구매 가능: 할인 가격은 {discountedPrice:F2}입니다.\r\n": $"품절되었습니다.\r\n";
+
+            textBox2.Text=stockCount>5?"여유 있음": "소량 남음";
             textBox3.Text = $"상품명:{productName},할인된 가격:{discountedPrice:F2}원, 재고:{stockCount}개";
             
 
