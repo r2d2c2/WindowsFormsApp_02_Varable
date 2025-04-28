@@ -43,11 +43,13 @@ namespace WindowsFormsApp_02_Varable
 
             // 실습
             byte retroColorRed = 20;
-            short myShort;
+            // 초등학교 학생수
+            short studentCount = 30;
             int myInt;
             long distanceToCanada_cm = 20;
             float myFloat;
-            double myDouble;
+            // 우주 로켓 발사 속도
+            double spaceToMoon_km;
             decimal myDecimal;
 
             textBox_print.Text = $"{retroColorRed.GetType()} retroColorRed: {retroColorRed}";
