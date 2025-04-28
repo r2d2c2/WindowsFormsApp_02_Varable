@@ -38,8 +38,20 @@ namespace WindowsFormsApp_02_Varable
             {
                 int inside = 100;
             }
-            textBox_print.Text = numOfCrew.GetType() + "numOfCrew: " + numOfCrew.ToString() + "\r\n";
+            //textBox_print.Text = numOfCrew.GetType() + "numOfCrew: " + numOfCrew.ToString() + "\r\n";
 
+
+            // 실습
+            byte retroColorRed = 20;
+            short myShort;
+            int myInt;
+            long distanceToCanada_cm = 20;
+            float myFloat;
+            double myDouble;
+            decimal myDecimal;
+
+            textBox_print.Text = $"{retroColorRed.GetType()} retroColorRed: {retroColorRed}";
+            textBox_print.Text += $"\r\n{distanceToCanada_cm.GetType()} distanceToCanada_cm: {distanceToCanada_cm}";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
